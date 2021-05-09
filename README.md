@@ -31,35 +31,69 @@ The code is set by default to run a Decision Tree model in the "ml_algorithm fun
 D.	Data Dictionary.
 All variables are binary 0/1 unless marked as continuous in the definition
 
-| Variable                     | Definition                                                                                                                  |
-|------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| service_spells               | Count of the number of cycles of “entry” and “exit” into workforce system   services (continuous)                           |
-| service_days_total           | Cumulative days of service receipt from the workforce system across all   spells of service (continuous)                    |
-| exityr_2017                  | 2017 rather than 2016 Exit Year from workforce system service                                                               |
-| veteran                      | Flag for veteran                                                                                                            |
-| age_cat_31_40                | Age 31-40 in years at program entry. Ommited Age 25-30 category for   interpretability.                                     |
-| age_cat_41_50                | Age 41-50 in years at program entry. Ommited Age 25-30 category for   interpretability.                                     |
-| age_cat_51_65                | Age 51-65 in years at program entry. Ommited Age 25-30 category for   interpretability.                                     |
-| race_eth_1.0                 | Hispanic. Omitted “White” for interpretability.                                                                             |
-| race_eth_2.0                 | Asian (Not Hispanic). Omitted “White” for interpretability.                                                                 |
-| race_eth_3.0                 | Black (Not Hispanic). Omitted “White” for interpretability.                                                                 |
-| race_eth_7.0                 | Multiple Race (not Hispanic). Omitted “White” for interpretability.                                                         |
-| race_eth_8.0                 | Native Hawaiian/Pacific Islander/American Indian/Alaska Native (not   Hispanic). Omitted “White” for interpretability.      |
-| race_eth_9.0                 | No response to race/ethnicity. Omitted “White” for interpretability.                                                        |
-| sex_2.0                      | Female.                                                                                                                     |
-| sex_9.0                      | No response to race. Ommitted male for interpetability.                                                                     |
-| edu_entry_0.0                | Less than HS. Omitted “Bachelor’s Degree or higher” for interpretability.                                                   |
-| edu_entry_1.0                | HS diploma or GED.                                                                                                          |
-| edu_entry_4.0                | Omitted “Bachelor’s Degree or higher” for interpretability.                                                                 |
-| edu_entry_5.0                | Postsecondary technical or vocational certificate. Omitted “Bachelor’s   Degree or higher” for interpretability.            |
-| edu_entry_6.0                | Associate’s degree. Omitted “Bachelor’s Degree or higher” for   interpretability.                                           |
-| criminal_entry_1.0           | Has a criminal history. Ommitted "no criminal history" for   interpetability                                                |
-| criminal_entry_9.0           | Refused to answer criminal history. Ommitted "no criminal   history" for interpetability                                    |
-| lowincome_entry              | Flag for low-income at entry                                                                                                |
-| esl_entry                    | Flag for English as a Second Language at entry                                                                              |
-| sparent_entry                | Flag for single parent at entry                                                                                             |
-| unemplong_entry              | Flag for being unemployed for 27 or more consecutive weeks                                                                  |
-| pubassist                    | Flag for receipt of TANF, SNAP, SSI, or other reported assistance                                                           |
-| skillrating1 - skillrating35 | Skill Rating on a scale from 0-5 from the O*Net Skills Databasemapped to   the client’s most recent occupation (continuous) |
-| state_AK - state_WY          | State that submitted the participant data. Omitted CA for   interpretability.                                               |
-| empQ4_WIOApost               | Employment status 4 quarters after exiting workforce system services.   This is the outcome variable.                       |
+| Variable            | Definition                                                                                                             |
+|---------------------|------------------------------------------------------------------------------------------------------------------------|
+| empQ4_WIOApost      | Employment status 4 quarters after exiting workforce system services.   This is the outcome variable.                  |
+| service_spells      | Count of the number of cycles of “entry” and “exit” into workforce system   services (continuous)                      |
+| service_days_total  | Cumulative days of service receipt from the workforce system across all   spells of service (continuous)               |
+| exityr_2017         | 2017 rather than 2016 Exit Year from workforce system service                                                          |
+| veteran             | Flag for veteran                                                                                                       |
+| age_cat_31_40       | Age 31-40 in years at program entry. Ommited Age 25-30 category for   interpretability.                                |
+| age_cat_41_50       | Age 41-50 in years at program entry. Ommited Age 25-30 category for   interpretability.                                |
+| age_cat_51_65       | Age 51-65 in years at program entry. Ommited Age 25-30 category for   interpretability.                                |
+| race_eth_1.0        | Hispanic. Omitted “White” for interpretability.                                                                        |
+| race_eth_2.0        | Asian (Not Hispanic). Omitted “White” for interpretability.                                                            |
+| race_eth_3.0        | Black (Not Hispanic). Omitted “White” for interpretability.                                                            |
+| race_eth_7.0        | Multiple Race (not Hispanic). Omitted “White” for interpretability.                                                    |
+| race_eth_8.0        | Native Hawaiian/Pacific Islander/American Indian/Alaska Native (not   Hispanic). Omitted “White” for interpretability. |
+| race_eth_9.0        | No response to race/ethnicity. Omitted “White” for interpretability.                                                   |
+| sex_2.0             | Female.                                                                                                                |
+| sex_9.0             | No response to race. Ommitted male for interpetability.                                                                |
+| edu_entry_0.0       | Less than HS. Omitted “Bachelor’s Degree or higher” for interpretability.                                              |
+| edu_entry_1.0       | HS diploma or GED.                                                                                                     |
+| edu_entry_4.0       | Omitted “Bachelor’s Degree or higher” for interpretability.                                                            |
+| edu_entry_5.0       | Postsecondary technical or vocational certificate. Omitted “Bachelor’s   Degree or higher” for interpretability.       |
+| edu_entry_6.0       | Associate’s degree. Omitted “Bachelor’s Degree or higher” for   interpretability.                                      |
+| criminal_entry_1.0  | Has a criminal history. Ommitted "no criminal history" for   interpetability                                           |
+| criminal_entry_9.0  | Refused to answer criminal history. Ommitted "no criminal   history" for interpetability                               |
+| lowincome_entry     | Flag for low-income at entry                                                                                           |
+| esl_entry           | Flag for English as a Second Language at entry                                                                         |
+| sparent_entry       | Flag for single parent at entry                                                                                        |
+| unemplong_entry     | Flag for being unemployed for 27 or more consecutive weeks                                                             |
+| pubassist           | Flag for receipt of TANF, SNAP, SSI, or other reported assistance                                                      |
+| state_AK - state_WY | State that submitted the participant data. Omitted CA for   interpretability.                                          |
+| skillrating1        | Active Learning- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                           |
+| skillrating2        | Active Listening- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                          |
+| skillrating3        | Complex Problem Solving- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                   |
+| skillrating4        | Coordination- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                              |
+| skillrating5        | Critical Thinking- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                         |
+| skillrating6        | Equipment Maintenance- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                     |
+| skillrating7        | Equipment Selection- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                       |
+| skillrating8        | Installation- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                              |
+| skillrating9        | Instructing- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                               |
+| skillrating10       | Judgment and Decision Making- Skill Rating on a scale from 0-5 for most   recent occcupation (continuous)              |
+| skillrating11       | Learning Strategies- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                       |
+| skillrating12       | Management of Financial Resources- Skill Rating on a scale from 0-5 for   most recent occcupation (continuous)         |
+| skillrating13       | Management of Material Resources- Skill Rating on a scale from 0-5 for   most recent occcupation (continuous)          |
+| skillrating14       | Management of Personnel Resources- Skill Rating on a scale from 0-5 for   most recent occcupation (continuous)         |
+| skillrating15       | Mathematics- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                               |
+| skillrating16       | Monitoring- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                                |
+| skillrating17       | Negotiation- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                               |
+| skillrating18       | Operation Monitoring- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                      |
+| skillrating19       | Operation and Control- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                     |
+| skillrating20       | Operations Analysis- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                       |
+| skillrating21       | Persuasion- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                                |
+| skillrating22       | Programming- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                               |
+| skillrating23       | Quality Control Analysis- Skill Rating on a scale from 0-5 for most   recent occcupation (continuous)                  |
+| skillrating24       | Reading Comprehension- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                     |
+| skillrating25       | Repairing- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                                 |
+| skillrating26       | Science- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                                   |
+| skillrating27       | Service Orientation- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                       |
+| skillrating28       | Social Perceptiveness- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                     |
+| skillrating29       | Speaking- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                                  |
+| skillrating30       | Systems Analysis- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                          |
+| skillrating31       | Systems Evaluation- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                        |
+| skillrating32       | Technology Design- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                         |
+| skillrating33       | Time Management- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                           |
+| skillrating34       | Troubleshooting- Skill Rating on a scale from 0-5 for most recent   occcupation (continuous)                           |
+| skillrating35       | Writing- Skill Rating on a scale from 0-5 for most recent occcupation   (continuous)                                   |
