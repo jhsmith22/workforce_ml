@@ -12,23 +12,23 @@ The project website contains:
 3.	A link to my Github page with the Python code
 4.	A link to the zipped csv file required to feed into my Python code to replicate my results.
 
-C.	Setup Requirements to Run Python Code
+C.	Setup Requirements to Run Python Code.
 This project is implemented using Python. You need Python software, the proper Python libraries installed, the data file, the Python code file, and substantial computer processing resources. 
 1.	Python Software. The python code was written using Python Version 3.8.5. You may need to update your Python software to this version in order to run the code.
-2.	Python Libraries. The first few lines of code in “employ_ml_code.py” imports the Python libraries needed to run the remaining code. Depending on what you have installed previously, you may need to install some of these libraries with the “pip install” command in your terminal window. For example, to install matplotlib, I entered the following in my terminal window: “pip install matplotlib.” See the full list of libraries you need below.
+2.	Python Libraries. The first few lines of code in “employ_ml_code.py” imports the Python libraries needed to run the remaining code. Depending on what you have installed previously, you may need to install some of these libraries with the “pip install” command in your terminal window. For example, to install matplotlib, I entered the following in my terminal window: “pip install matplotlib.” The libraries you need are as follows:
 o	Numpy
 o	Pandas
 o	Matplotlib
 o	Sklearn
-o	Graphviz
+
 3.	Data File. You can download a zipfile of the full dataset (~4 million rows) entitled “data2018Q2.zip” from my project website at the following link: https://jhsmith22.github.io/workforce_ml/. It was too large to upload to Gradescope. You will need to unzip the dataset before loading it into the Python Code.
 4.	Python Code. The python code file is entitled “employ_ml_code.py.” You need to update line XX of the code with the location of the unzipped “data2018Q2” data file. If you would like to instead use a small dataset for testing, I have uploaded "data2018Q2_small.csv" to Gradescope. This will not produce the same results as my full data file but will allow you to test the code. 
 5.	Computer Processing Resources. The data file is quite large (~4 million rows) and running the machine learning algorithms, in particular the Random Forest model, is time-intensive. I ran the code with an 8-core i7-9700K CPU running at 3.6 GHz, with all 8 cores running in parallel, on a computer with 64 GB DDR4 RAM. The Random Forest code required several hours to complete.
 
-D.	Selecting the Decision Tree or Random Forest Machine Learning Algorithms
+D.	Selecting the Decision Tree or Random Forest Machine Learning Algorithms.
 The code is set by default to run a Decision Tree model in the "ml_algorithm function. "To switch to the Random Forest, you need to comment out the DECISION TREE MODEL BLOCK. Then remove the comment marks from the RANDOM FOREST MODEL BLOCK. As desired, you may want to change the values of the parameters in the param_grid to further refine the model
 
-D.	Data Dictionary
+D.	Data Dictionary.
 All variables are binary 0/1 unless marked as continuous in the definition
 
 | Variable                     | Definition                                                                                                                  |
