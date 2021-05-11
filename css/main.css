@@ -10,9 +10,8 @@
     text-align: left;
 }
 
-dt, .violet
+.violet
 {
-line-height:200%;
 color: violet;
 font-weight:bold;
 font-size:medium;
