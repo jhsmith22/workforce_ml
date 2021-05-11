@@ -21,7 +21,7 @@ o	Pandas
 o	Matplotlib
 o	Sklearn
 
-3.	Data File. You can download a zipfile of the full dataset (~4 million rows) entitled “data2018Q2.zip” from my project website at the following link: https://jhsmith22.github.io/workforce_ml/. You will need to unzip the dataset before loading it into the Python Code. The file was too large to upload to Gradescope. If you would like to instead use a small dataset for testing, I have uploaded "data2018Q2_small.csv" to Gradescope. This will not produce the same results as my full data file but will allow you to test the code. 
+3.	Data File. You can download a zipfile of the full dataset (~4 million rows) entitled “data2018Q2.zip” from my project website at the following link: https://jhsmith22.github.io/workforce_ml/. You will need to unzip the dataset before loading it into the Python Code. The file was too large to upload to Gradescope. If you would like to instead use a small dataset for testing, I am sharing "data2018Q2_small.csv" directly with my Teaching Fellow. This will not produce the same results as my full data file but will allow you to test the code. 
 4.	Python Code. The python code file is entitled “employ_ml_code.py.” You need to update the following line of code with the location of the unzipped “data2018Q2” data file: "data = pd.read_csv('data2018Q2.csv')." 
 5.	Computer Processing Resources. The data file is quite large (~4 million rows) and running the machine learning algorithms, in particular the Random Forest model, is time-intensive. I ran the code with an 8-core i7-9700K CPU running at 3.6 GHz, with all 8 cores running in parallel, on a computer with 64 GB DDR4 RAM. The Random Forest code required several hours to complete.
 
