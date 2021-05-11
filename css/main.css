@@ -27,4 +27,11 @@ color: MediumSeaGreen;
 font-weight:bold;
 }
 
+.videoslides {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
 </style>
