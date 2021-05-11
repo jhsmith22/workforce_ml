@@ -13,8 +13,8 @@ The project website contains:
 4.	A link to the zipped csv file required to feed into my Python code to replicate my results.
 
 # C.	Setup Requirements to Run Python Code.
-This project is implemented using Python. You need Python software, the proper Python libraries installed, the data file, the Python code file, and substantial computer processing resources. 
-1.	Python Software. The python code was written using Python Version 3.8.5. You may need to update your Python software to this version in order to run the code.
+This project is implemented using Python. You need Python software, the proper Python libraries installed, the data file, the Python code file, and substantial computer processing resources.
+1.	Python Software. The python code was written using Python Version 3.8.5. You may need to update your Python software to this version in order to run the code. 
 2.	Python Libraries. The first few lines of code in “employ_ml_code.py” imports the Python libraries needed to run the remaining code. Depending on what you have installed previously, you may need to install some of these libraries with the “pip install” command in your terminal window. For example, to install matplotlib, I entered the following in my terminal window: “pip install matplotlib.” The libraries you need are as follows:
 o	Numpy
 o	Pandas
